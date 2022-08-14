@@ -1,0 +1,295 @@
+<%- include("partials/header") %>
+    <!-- Navbar ends -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="pt-2 ">Welcome to Saurav News</h4>
+            </div>
+            <div class="col-12">
+                <div class="d-flex justify-content-between">
+                    <h4>Top Headlines</h4>
+                    <a href="/news"
+                        style="font-size: 1.5rem; text-decoration: none;">View More
+                    </a>
+                </div>
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                    </div>
+                    <!-- Slide 1 -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href=<%= articles[0].url %>>
+                                <img src=<%=articles[0].urlToImage%>
+                                class="d-block w-100" 
+                                alt="Image Unavailable">
+                            </a>
+                            <div class="carousel-caption ">
+                                <h5>
+                                    <%=articles[0].title%>
+                                </h5>
+                                <p>
+                                    <%=articles[0].description%>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <% for(let idx=1;idx<5;idx++){ %>
+                            <div class="carousel-item">
+                                <a href=<%= articles[idx].url%>> 
+                                    <img src=<%=articles[idx].urlToImage%>
+                                    class="d-block w-100"
+                                    alt="Image Unavailable">
+                                </a>
+                                <div class="carousel-caption ">
+                                    <h5>
+                                        <%= articles[idx].title %>
+                                    </h5>
+                                    <p>
+                                        <%=articles[idx].description%>
+                                    </p>
+                                </div>
+                            </div>
+                            <% } %>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- First slideshow ends -->
+        <div class="row mt-3">
+            <div class="col-12 m-auto">
+                <div class="d-flex justify-content-between">
+                    <h4 style="margin-left:10px ;">Top Headlines India</h4>
+                    <a href="/topHeadlines"
+                        style="font-size: 1.5rem; text-decoration: none; margin-right: 10px;">View More
+                    </a>
+                </div>
+                <div id="carouselExampleCaptions1" class="carousel slide" style="padding-left:10px ; padding-right:10px" data-bs-ride="false">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                    </div>
+                    <!-- Slide 1 -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href= <%=articles[5].url%>>
+                                <img src=<%=articles[5].urlToImage%>
+                                class="d-block w-100"
+                                alt="Image Unavailable">
+                            </a>
+                            <div class="carousel-caption">
+                                <h5>
+                                    <%=articles[5].title%>
+                                </h5>
+                                <p>
+                                    <%=articles[5].description%>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <% for(let idx=6;idx<10;idx++){ %>
+                            <div class="carousel-item">
+                                <a href= <%=articles[idx].url%>>
+                                    <img src=<%=articles[idx].urlToImage%>
+                                    class="d-block w-100"
+                                    alt="Image Unavailable">
+                                </a>
+                                <div class="carousel-caption ">
+                                    <h5>
+                                        <%= articles[idx].title %>
+                                    </h5>
+                                    <p>
+                                        <%=articles[idx].description%>
+                                    </p>
+                                </div>
+                            </div>
+                            <% } %>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleCaptions1" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleCaptions1" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Second Slide Show Ends -->
+        <div class="row mt-3">
+            <div class="col-12 m-auto">
+                <div class="d-flex justify-content-between">
+                    <h4 style="margin-left:10px ;">Sports</h4>
+                    <a href="/sports"
+                        style="font-size: 1.5rem; text-decoration: none; margin-right: 10px;">View More
+                    </a>
+                </div>
+                <div id="carouselExampleCaptions2" class="carousel slide" style="padding-left:10px ; padding-right:10px" data-bs-ride="false">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                    </div>
+                    <!-- Slide 1 -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href= <%=articles[10].url%>>
+                                <img src=<%=articles[10].urlToImage%>
+                                class="d-block w-100"
+                                alt="Image Unavailable">
+                            </a>
+                            <div class="carousel-caption">
+                                <h5>
+                                    <%=articles[10].title%>
+                                </h5>
+                                <p>
+                                    <%=articles[10].description%>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <% for(let idx=11;idx<15;idx++){ %>
+                            <div class="carousel-item">
+                                <a href= <%=articles[idx].url%>>
+                                    <img src=<%=articles[idx].urlToImage%>
+                                    class="d-block w-100"
+                                    alt="Image Unavailable">
+                                </a>
+                                <div class="carousel-caption ">
+                                    <h5>
+                                        <%= articles[idx].title %>
+                                    </h5>
+                                    <p>
+                                        <%=articles[idx].description%>
+                                    </p>
+                                </div>
+                            </div>
+                            <% } %>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleCaptions2" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleCaptions2" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Third SlideShow end -->
+        <div class="row mt-3">
+            <div class="col-12 m-auto">
+                <div class="d-flex justify-content-between">
+                    <h4 style="margin-left:10px ;">Entertainment</h4>
+                    <a href="/entertainment"
+                        style="font-size: 1.5rem; text-decoration: none; margin-right: 10px;">View More
+                    </a>
+                </div>
+                <div id="carouselExampleCaptions3" class="carousel slide" style="padding-left:10px ; padding-right:10px" data-bs-ride="false">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                    </div>
+                    <!-- Slide 1 -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href= <%=articles[15].url%>>
+                                <img src=<%=articles[15].urlToImage%>
+                                class="d-block w-100"
+                                alt="Image Unavailable">
+                            </a>
+                            <div class="carousel-caption ">
+                                <h5>
+                                    <%=articles[15].title%>
+                                </h5>
+                                <p>
+                                    <%=articles[15].description%>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <% for(let idx=16;idx<20;idx++){ %>
+                            <div class="carousel-item">
+                                <a href= <%=articles[idx].url%>>
+                                    <img src=<%=articles[idx].urlToImage%>
+                                    class="d-block w-100"
+                                    alt="Image Unavailable">
+                                </a>
+                                <div class="carousel-caption ">
+                                    <h5>
+                                        <%= articles[idx].title %>
+                                    </h5>
+                                    <p>
+                                        <%=articles[idx].description%>
+                                    </p>
+                                </div>
+                            </div>
+                            <% } %>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleCaptions3" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleCaptions3" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<%- include("partials/footer") %>

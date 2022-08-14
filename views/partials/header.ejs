@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles1.css">
+    <title>Saurav's News</title>
+</head>
+
+<body>
+    <!-- Navbar Starts -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <nav class="navbar navbar-dark bg-dark">
+                <div class="container-fluid d-flex">
+                    <a class="navbar-brand" href="/">
+                        Saurav News
+                    </a>
+                </div>
+            </nav>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item ">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/news">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/sports">Sports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/entertainment">Entertainment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Log Out</a>
+                    </li>
+                </ul>
+                <form class="d-flex " method="POST" action="/query">
+                    <input class="form-control me-2" type="text" name="searchReq" placeholder="Search sbc news" aria-label="Search" autocomplete="off">
+                    <input type="submit" class="btn btn-outline-light " >
+                </form>
+            </div>
+        </div>
+    </nav>

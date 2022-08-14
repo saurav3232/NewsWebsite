@@ -1,0 +1,26 @@
+<%- include("partials/header") %>
+    <!-- Navbar ends -->
+    <h4 class="pt-2 ms-4">Top headlines</span> </h4>
+    <div class="container-fluid">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <% for(let i=0;i<articles.length;i++){%>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src=<%=articles[i].urlToImage%> class="card-img-top" alt="Image Unavailable">
+                        <div class="card-body">
+                            <p style="font-weight: bold; " class="card-title"><%=articles[i].title %> </p>
+                            <p class="card-text">
+                                <%= articles[i].description %>
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                                 <a href="<%=articles[i].url %> ">Read
+                                    full post here</a>
+                        </div>
+                    </div>
+                </div>
+                <%} %>
+        </div>
+    </div>
+
+    <%- include("partials/footer") %>
